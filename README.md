@@ -1,4 +1,4 @@
-<img src="docs/assests/logo.svg" width="500">
+<img src="docs/assets/logo.svg" width="500">
 
 🚧🛠️👷‍♂️ Under construction: all features listed are wishful thinking for the time being 👷‍♂️🛠️🚧
 
