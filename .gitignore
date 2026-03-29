@@ -1,2 +1,45 @@
+# Rust build artifacts
+/target/
+
+# Cargo lock file (usually ignored for libraries, committed for binaries)
+Cargo.lock
+
+# Backup files
+**/*.rs.bk
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.*
+
+# Coverage / profiling
+*.profraw
+*.profdata
+coverage/
+
+# Temporary files
+tmp/
+temp/
+
+# Generated documentation
+/doc/
+
+# Rustfmt backup
+rustfmt.toml.bk
+
+# Other directories
 crates/ionbreak/src/utils/
-target/

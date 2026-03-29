@@ -1,7 +1,6 @@
 use crate::atom::Atom;
 
 pub mod natural;
-pub mod all;
 
 // NIST Atomic Weights and Isotopic Compositions - Accessed 26 March 2026
 pub static H1   : Atom = Atom::new(  1,   1,   1.00782503223, 0.999885  );
