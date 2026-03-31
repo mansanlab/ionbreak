@@ -2,7 +2,6 @@ use super::*;
 use std::sync::LazyLock;
 use std::collections::HashMap;
 
-
 pub static ATOM_SYMBOL_BY_NUM: std::sync::LazyLock<HashMap<u16, &str>> = LazyLock::new(|| HashMap::from([
     (   H1.num,  "H"), (  HE3.num, "HE"), (  LI3.num, "LI"), (  BE5.num, "BE"), (   B6.num,  "B"), (   C8.num,  "C"), (  N10.num,  "N"), (  O12.num,  "O"), (  F14.num,  "F"), ( NE16.num, "NE"), 
     ( NA18.num, "NA"), ( MG19.num, "MG"), ( AL21.num, "AL"), ( SI22.num, "SI"), (  P24.num,  "P"), (  S26.num,  "S"), ( CL28.num, "CL"), ( AR30.num, "AR"), (  K32.num,  "K"), ( CA34.num, "CA"), 

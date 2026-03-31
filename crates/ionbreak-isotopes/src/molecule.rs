@@ -42,15 +42,19 @@ impl Molecule {
         element_formula: &[(Element, usize)],
         isotope_formula: &[(&'static Atom, usize)],
     ) {
-        for (element, count) in element_formula {
-            for atom in element.atoms {
-                self.atoms.push((atom, *count, None));
-            }
-        }
+        self.atoms.extend(
+        element_formula
+            .iter()
+            .flat_map(|(element, count)| {
+                element.atoms.iter().map(move |atom| (atom, *count, None))
+            })
+        );
 
-        for (atom, count) in isotope_formula {
-            self.atoms.push((atom, *count, Some(1.0)));
-        }
+        self.atoms.extend(
+        isotope_formula
+            .iter()
+            .map(|&(atom, count)| (atom, count, Some(1.0)))
+        );  
     }
 
     pub fn add_element_formula(&mut self, formula: &[(Element, usize)]) {
@@ -62,19 +66,20 @@ impl Molecule {
     }
 
     pub fn add_elements(&mut self, elements: &[Element]) {
-        for element in elements {
-            for atom in element.atoms {
-                self.atoms.push((atom, 1, None));
-            }
-        }
+        self.atoms.extend(
+        elements.iter()
+            .flat_map(|element| {
+                element.atoms.iter().map(|atom| (atom, 1, None))
+            })
+        );
     }
 
     pub fn amu(&self) -> f64 {
         self.atoms
             .iter()
-            .map(|(a, count, prob_override)| {
+            .map(|&(a, count, prob_override)| {
                 let prob = prob_override.unwrap_or(a.prob);
-                a.amu * prob * *count as f64
+                a.amu * prob * count as f64
             })
             .sum()
     }
@@ -131,7 +136,6 @@ impl fmt::Display for Molecule {
                                         .collect();
                                               
         chemical_formula_isotopes.sort_unstable_by_key(|&(key, _)| key);
-
         let formula_string_isotopes: String = chemical_formula_isotopes
                                         .iter()
                                         .map(|(key, count)| 
