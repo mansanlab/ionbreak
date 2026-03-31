@@ -12,9 +12,9 @@ impl Element {
     }
 
     pub fn amu(&self) -> f64 {
-        let w_amu: f64 = self.atoms.iter().map(|&a| a.amu * a.prob).sum();
+        let w_amu: f64 = self.atoms.iter().map(|a| a.amu * a.prob).sum();
 
-        let w: f64 = self.atoms.iter().map(|&a| a.prob).sum();
+        let w: f64 = self.atoms.iter().map(|a| a.prob).sum();
 
         w_amu / w
     }

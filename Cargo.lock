@@ -5,3 +5,18 @@ version = 4
 [[package]]
 name = "ionbreak"
 version = "0.1.0"
+dependencies = [
+ "ionbreak-isodalton",
+ "ionbreak-isotopes",
+]
+
+[[package]]
+name = "ionbreak-isodalton"
+version = "0.1.0"
+dependencies = [
+ "ionbreak-isotopes",
+]
+
+[[package]]
+name = "ionbreak-isotopes"
+version = "0.1.0"

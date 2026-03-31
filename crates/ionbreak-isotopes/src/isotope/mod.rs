@@ -1,8 +1,13 @@
 use crate::atom::Atom;
 
 pub mod natural;
+pub mod name;
 
 // NIST Atomic Weights and Isotopic Compositions - Accessed 26 March 2026
+pub static ELECTRON   : Atom = Atom::new(0, 0, 0.0005485799090441, 1.0);
+pub static PROTON     : Atom = Atom::new(0, 0, 1.0072764665789   , 1.0);
+pub static NEUTRON    : Atom = Atom::new(0, 0, 1.00866491606     , 1.0);
+
 pub static H1   : Atom = Atom::new(  1,   1,   1.00782503223, 0.999885  );
 pub static H2   : Atom = Atom::new(  1,   2,   2.01410177812, 0.000115  );
 pub static H3   : Atom = Atom::new(  1,   3,   3.0160492779 , 0.0       );

@@ -42,4 +42,4 @@ temp/
 rustfmt.toml.bk
 
 # Other directories
-crates/ionbreak/src/utils/
+dev_utils/

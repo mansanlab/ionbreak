@@ -9,3 +9,7 @@ rust-version = "1.85"
 homepage = "https://github.com/mansanlab/ionbreak"
 repository = "https://github.com/mansanlab/ionbreak"
 authors = ["Edgar Manriquez-Sandoval", "Daniel Bailey"]
+
+[workspace.dependencies]
+ionbreak-isotopes = { version = "0.1.0", path = "crates/ionbreak-isotopes" }
+ionbreak-isodalton = { version = "0.1.0", path = "crates/ionbreak-isodalton" }

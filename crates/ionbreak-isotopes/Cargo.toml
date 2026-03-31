@@ -1,5 +1,5 @@
 [package]
-name = "ionbreak"
+name = "ionbreak-isotopes"
 version = "0.1.0"
 edition = { workspace = true }
 rust-version = { workspace = true }
@@ -9,5 +9,3 @@ authors = { workspace = true }
 license = { workspace = true }
 
 [dependencies]
-ionbreak-isotopes = { workspace = true }
-ionbreak-isodalton = { workspace = true }
