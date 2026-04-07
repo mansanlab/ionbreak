@@ -1,7 +1,6 @@
 use crate::atom::Atom;
 
 pub mod natural;
-pub mod name;
 
 // NIST Atomic Weights and Isotopic Compositions - Accessed 26 March 2026
 pub static ELECTRON   : Atom = Atom::new(0, 0, 0.0005485799090441, 1.0);

@@ -11,5 +11,5 @@ repository = "https://github.com/mansanlab/ionbreak"
 authors = ["Edgar Manriquez-Sandoval", "Daniel Bailey"]
 
 [workspace.dependencies]
-ionbreak-isotopes = { version = "0.1.1", path = "crates/ionbreak-isotopes" }
-ionbreak-isodalton = { version = "0.1.0", path = "crates/ionbreak-isodalton" }
+ionbreak-isotopes = { version = "0.1.2", path = "crates/ionbreak-isotopes" }
+ionbreak-spectrum = { version = "0.1.0", path = "crates/ionbreak-spectrum" }

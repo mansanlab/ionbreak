@@ -6,17 +6,17 @@ version = 4
 name = "ionbreak"
 version = "0.1.0"
 dependencies = [
- "ionbreak-isodalton",
  "ionbreak-isotopes",
-]
-
-[[package]]
-name = "ionbreak-isodalton"
-version = "0.1.0"
-dependencies = [
- "ionbreak-isotopes",
+ "ionbreak-spectrum",
 ]
 
 [[package]]
 name = "ionbreak-isotopes"
-version = "0.1.1"
+version = "0.1.2"
+
+[[package]]
+name = "ionbreak-spectrum"
+version = "0.1.0"
+dependencies = [
+ "ionbreak-isotopes",
+]
