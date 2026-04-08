@@ -1,8 +1,12 @@
+//! Reference:
+//! Efficient calculation of exact mass isotopic distributions
+//! Ross K. Snider
+//! Journal of the American Society for Mass Spectrometry 2007 18 (8), 1511-1515
+//! DOI: 10.1016/j.jasms.2007.05.016
+
 use super::spectrum::Peak;
 use ionbreak_isotopes::atom::Atom;
 use ionbreak_isotopes::molecule::Molecule;
-
-// implements isoDalton from https://doi.org/10.1016/j.jasms.2007.05.016
 
 fn merge_nearby_peaks(peaks: &mut Vec<Peak>) {
     let mut merged: Vec<Peak> = Vec::with_capacity(peaks.len());

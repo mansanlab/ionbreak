@@ -1,2 +1,2 @@
-pub mod peaks;
+pub mod isodalton;
 pub mod spectrum;

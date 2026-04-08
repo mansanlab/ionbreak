@@ -2,7 +2,7 @@ use std::env;
 use ionbreak_isotopes::isotope::*;
 use ionbreak_isotopes::isotope::natural::*;
 use ionbreak_isotopes::molecule::Molecule;
-use ionbreak_spectrum::peaks::isotope_distribution;
+use ionbreak_spectrum::isodalton::isotope_distribution;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -16,5 +16,9 @@ fn main() {
     );
 
     let peaks = isotope_distribution(&mol, max_peaks);
-    println!("{:#?}", peaks);
+
+    println!("mass,prob");
+    for peak in peaks {
+        println!("{:},{:}", peak.amu, peak.prob);
+    }
 }
