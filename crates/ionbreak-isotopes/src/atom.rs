@@ -1,4 +1,3 @@
-#[derive(Debug, Default, PartialEq, PartialOrd)]
 pub struct Atom {
     // Atomic number
     pub num: u16,

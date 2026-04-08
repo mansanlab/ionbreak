@@ -1,20 +1,20 @@
+use std::env;
 use ionbreak_isotopes::isotope::*;
-use ionbreak_isotopes::isotope::natural::*; // Loads all Elements
+use ionbreak_isotopes::isotope::natural::*;
 use ionbreak_isotopes::molecule::Molecule;
+use ionbreak_spectrum::peaks::isotope_distribution;
 
 fn main() {
-    
-    let element_formula = [(&C,41), (&H,73), (&N,1), (&O,8), (&P,1)];
-    let atom_formula = [(&H2, 7)];
+    let args: Vec<String> = env::args().collect();
+    let max_peaks: usize = args[1].parse::<usize>().unwrap();
 
-    let lipid_15_0_18_1_d7_pc: Molecule = Molecule::new(
-    &element_formula,
-    &atom_formula
+    let elements = [(&C,254), (&H,189), (&N,65), (&O,75), (&S,6)];
+    let atoms = [(&H2,189)];
+    let mol: Molecule = Molecule::new(
+        &elements,
+        &atoms
     );
 
-    println!("{}", lipid_15_0_18_1_d7_pc.avg_amu());
-    println!("{}", lipid_15_0_18_1_d7_pc.amu());
-
-    println!("{:p}", &C);
-    println!("{:p}", element_formula[0].0);
+    let peaks = isotope_distribution(&mol, max_peaks);
+    println!("{:#?}", peaks);
 }

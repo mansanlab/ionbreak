@@ -1,7 +1,7 @@
 use crate::atom::Atom;
 use crate::element::Element;
 
-#[derive(Clone, Debug, PartialEq, PartialOrd)]
+#[derive(Clone)]
 pub struct Molecule<'a> {
     // Stores elements with their natural isotpoic abudnances
     pub elements: &'a [(&'static Element, usize)],
