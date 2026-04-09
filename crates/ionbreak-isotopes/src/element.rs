@@ -22,11 +22,11 @@ impl Element {
         self.atoms.first().unwrap().amu
     }
 
-    pub fn num(&self) -> u16 {
+    pub fn num(&self) -> usize {
         self.atoms.first().unwrap().num
     }
 
-    pub fn mass(&self) -> u16 {
+    pub fn mass(&self) -> usize {
         // relies on `isotope::natural` to be sorted by most abundant isotope first
         self.atoms.first().unwrap().mass
     }

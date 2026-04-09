@@ -1,8 +1,8 @@
 pub struct Atom {
     // Atomic number
-    pub num: u16,
+    pub num: usize,
     // Atomic mass
-    pub mass: u16,
+    pub mass: usize,
     // Monoisotopic mass (amu)
     pub amu: f64,
     // Isotopic probability (0.0 - 1.0)
@@ -10,7 +10,7 @@ pub struct Atom {
 }
 
 impl Atom {
-    pub const fn new(num: u16, mass: u16, amu: f64, prob: f64) -> Self {
+    pub const fn new(num: usize, mass: usize, amu: f64, prob: f64) -> Self {
         Self { num, mass, amu, prob }
     }
 }
